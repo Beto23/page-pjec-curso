@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@import "styles/vendor/reset";
+
+@import "styles/common/common";
+@import "styles/common/header";
+@import "styles/views/home/home-hero";
+@import "styles/views/home/home-welcome";
+@import "styles/views/home/home-articles";
+@import "styles/views/home/home-directory";

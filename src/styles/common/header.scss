@@ -1,0 +1,24 @@
+.pj-header {
+  background-image: url("img/pjec-background-1280.jpg");
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  height: 165px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  color: white;
+  z-index: 10;
+}
+
+.pj-header .pj-header-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pj-header .pj-header-nav ul li {
+  cursor: pointer;
+}
