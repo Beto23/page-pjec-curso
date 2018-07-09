@@ -4,8 +4,66 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+%container {
+  display: flex;
+  background-color: red;
+}
+
+.container2 {
+  color: white;
+}
+
+$boolean: true;
+
+@mixin condition {
+  @if $boolean {
+    display: block;
+  } @else {
+    display: none;
+  }
+}
+
 h1 {
   font-size: 30px;
   text-align: center;
   margin: 2rem 0;
+
+  //herencia
+  @extend %container;
+  @extend .container2;
+  @include condition;
+}
+
+p {
+  @include condition;
+}
+
+@for $i from 1 through 4 {
+  .item-list-#{$i} {
+    width: 70px + $i;
+  }
+}
+
+// marca-fiat.png marca-honda.png
+$marcas: "fiat" "dodge" "honda" "jeep";
+
+@mixin marcas {
+  @each $marca in $marcas {
+    .marca-item-#{$marca} {
+      background-image: url("marca/#{$marca}.png");
+    }
+  }
+}
+
+.marca {
+  @include marcas;
+}
+
+$count: 4;
+
+@while $count > 0 {
+  .parrafo-#{$count} {
+    width: 500px + $count;
+  }
+  $count: $count - 1;
 }
